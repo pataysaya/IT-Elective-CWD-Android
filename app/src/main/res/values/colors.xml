@@ -6,7 +6,7 @@
     <color name="LoginColor">#97D6DD</color>
     <color name="LogoutColor">#ECABD5</color>
     <color name="Textlink">#3453C5</color>
-    <color name="custom_red">#D33333</color>
+    <color name="custom_red">#F33333</color>
     <color name="pale_white">#EACACA</color>
     <color name="dark_gray">#635B5B</color>
 </resources>

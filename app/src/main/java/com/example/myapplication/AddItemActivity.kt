@@ -19,7 +19,6 @@ class AddItemActivity : AppCompatActivity(){
     private lateinit var auth: FirebaseAuth
 
     private val db = Firebase.firestore
-    lateinit var btnAddItemSubmit: Button
 
     @IgnoreExtraProperties
     data class Item(
@@ -64,12 +63,20 @@ class AddItemActivity : AppCompatActivity(){
                     etImageUrlFirst.setHintTextColor(R.color.custom_red)
                 }
 
+                if(!val_itemName.equals("")){
+                    etItemName.setTextColor(R.color.black)
+                }
+                if(!val_description.equals("")){
+                    etDescription.setTextColor(R.color.black)
+                }
+                if(!val_price.equals("")){
+                    etPrice.setTextColor(R.color.black)
+                }
+                if(!val_imageUrlFirst.equals("")){
+                    etImageUrlFirst.setTextColor(R.color.black)
+                }
 
-                Toast.makeText(
-                    baseContext,
-                    "Required fields.",
-                    Toast.LENGTH_SHORT,
-                ).show()
+                Toast.makeText(baseContext,"Required fields.",Toast.LENGTH_SHORT).show()
             }else {
                 val item = Item(val_itemName, val_description, val_price,val_timestamp, val_imageUrlFirst)
                 addItem(item)
@@ -82,7 +89,7 @@ class AddItemActivity : AppCompatActivity(){
     }
 
     fun updateUI(){
-        var intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }

@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
+    android:theme="@style/Theme.MyApplication"
     tools:context=".ViewDetailsActivity">
 
     <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/pad_small"
@@ -18,6 +20,7 @@
             android:id="@+id/itemimage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/twohundreddp"
+            android:contentDescription="@string/app_name"
             android:scaleType="fitCenter" />
 
         <LinearLayout
@@ -32,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center|center_horizontal"
-                android:text="Item Name"
+                android:text="@string/item_name"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="20sp"
@@ -44,8 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/threehundreddp"
                 android:textAlignment="center"
-                android:theme="@style/TextAppearance.AppCompat.Body2"
-                android:layout_below="@id/image" />
+                android:theme="@style/TextAppearance.AppCompat.Body2" />
 
         </LinearLayout>
 
@@ -61,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Item Price"
+                android:text="@string/item_price"
                 android:textColor="@color/custom_red"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -76,7 +78,8 @@
                 android:drawableTop="@drawable/icons_cart"
                 android:text="@string/addtocart"
                 android:textColor="@color/black"
-                app:cornerRadius="8sp" />
+                app:cornerRadius="8sp"
+                tools:ignore="VisualLintButtonSize" />
 
 
 

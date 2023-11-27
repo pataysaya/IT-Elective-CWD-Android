@@ -13,7 +13,8 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/computer_world_logo" />
+        android:src="@drawable/computer_world_logo"
+        android:contentDescription="@string/app_name" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,9 +49,10 @@
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/scrollLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/scrollLayout">
+        android:contentDescription="@string/CW">
 
         <LinearLayout
             android:id="@+id/listLayout"

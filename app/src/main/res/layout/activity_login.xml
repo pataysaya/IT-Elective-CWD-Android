@@ -63,7 +63,8 @@
                 android:backgroundTint="@color/LoginColor"
                 android:text="@string/login"
                 android:textColor="@color/black"
-                app:cornerRadius="8sp" />
+                app:cornerRadius="8sp"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/regButton"
@@ -76,7 +77,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:backgroundTint="@color/RegisterColor"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                tools:ignore="VisualLintButtonSize" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
