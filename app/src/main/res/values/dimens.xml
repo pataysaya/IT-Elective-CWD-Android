@@ -1,0 +1,31 @@
+<!-- res/values/dimens.xml -->
+<resources>
+
+    <!-- Example dimension for margin -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_xl">32dp</dimen>
+    <dimen name="margin_2xl">40dp</dimen>
+
+    <!-- Example dimension for text size -->
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <dimen name="pad_small">5dp</dimen>
+    <dimen name="pad_normal">10dp</dimen>
+    <dimen name="pad_medium">15dp</dimen>
+    <dimen name="pad_large">20dp</dimen>
+
+    <dimen name="hundreddp">100dp</dimen>
+    <dimen name="hundred30dp">130dp</dimen>
+    <dimen name="hundred50dp">150dp</dimen>
+    <dimen name="hundred80dp">180dp</dimen>
+    <dimen name="twohundreddp">200dp</dimen>
+    <dimen name="threehundreddp">300dp</dimen>
+
+
+    <!-- Add more dimensions as needed -->
+
+</resources>

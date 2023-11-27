@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Computer World Davao App</string>
+
+    <string name="Back">Back</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_description">Description</string>
+    <string name="item_price">Price</string>
+    <string name="image_URL">Image URL</string>
+    <string name="add_item">Add Item</string>
+    <string name="email">Email</string>
+    <string name="logout">Logout</string>
+    <string name="display_name">Display Name</string>
+    <string name="password">Enter Password</string>
+    <string name="password2">Confirm Password</string>
+    <string name="reg_n_log">Register &amp; Login</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="CW">Computer World</string>
+    <string name="addtocart">Add To Cart</string>
+
+
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1060598309509",
+    "project_id": "t2023it2-computerworlddavao",
+    "storage_bucket": "t2023it2-computerworlddavao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060598309509:android:949df07611c9b99f82ffec",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEGwuUSWPaCtf0_Iy4UvQ6fa6xGNjEeu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
