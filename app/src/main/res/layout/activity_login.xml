@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/imageView2">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -48,11 +48,11 @@
                 android:ems="20"
                 android:gravity="center"
                 android:hint="@string/password"
+                android:importantForAutofill="no"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/dark_gray"
-                android:importantForAutofill="no" />
+                android:textColorHint="@color/dark_gray" />
 
             <Button
                 android:id="@+id/logButton"
@@ -70,13 +70,13 @@
                 android:id="@+id/regButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/RegisterColor"
                 android:text="@string/register"
                 android:textColor="@color/black"
                 app:cornerRadius="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:backgroundTint="@color/RegisterColor"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2"
                 tools:ignore="VisualLintButtonSize" />
         </LinearLayout>
@@ -84,16 +84,15 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="@dimen/hundred50dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:scaleType="fitCenter"
-        android:layout_height="@dimen/hundred50dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/cwgif_"
         android:contentDescription="@string/CW" />
-<!--        app:srcCompat="@drawable/computer_world_logo"-->
 
 
 

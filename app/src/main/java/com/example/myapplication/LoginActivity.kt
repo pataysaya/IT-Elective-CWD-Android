@@ -7,22 +7,27 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.Firebase
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.firestore
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private val db = Firebase.firestore
+    //private val db = Firebase.firestore
 
     @SuppressLint("MissingInflatedId", "ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        val animatedImageView: ImageView = findViewById<ImageView>(R.id.imageView2)
+        animatedImageView.setImageResource(R.drawable.cwgif_)
+
+        Glide.with(this).asGif().load(R.drawable.cwgif_).into(animatedImageView)
 
         auth = FirebaseAuth.getInstance()
 
@@ -65,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun signInEmailPass(email:String, passw:String){
-        auth.signInWithEmailAndPassword(email.trim().toString(), passw.trim().toString())
+        auth.signInWithEmailAndPassword(email.trim(), passw.trim())
             .addOnCompleteListener(this){task ->
                 if (task.isSuccessful) {
                     Log.d("ZZZlog", "signInWithEmail:success")

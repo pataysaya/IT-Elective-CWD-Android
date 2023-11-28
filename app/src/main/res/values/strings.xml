@@ -17,6 +17,8 @@
     <string name="register">Register</string>
     <string name="CW">Computer World</string>
     <string name="addtocart">Add To Cart</string>
+    <string name="choose_file">Choose File</string>
+    <string name="upload_file">Upload File</string>
 
 
 </resources>
