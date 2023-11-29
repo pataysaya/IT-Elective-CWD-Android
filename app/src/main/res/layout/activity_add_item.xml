@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/pad_small"
     android:background="@color/white"
     tools:context=".AddItemActivity">
 
@@ -87,12 +88,13 @@
             tools:ignore="TextFields,VisualLintTextFieldSize"
             android:autofillHints="" />
 
-        <ImageView
+        <View
             android:id="@+id/imageview4"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/hundreddp"
+            android:layout_height="@dimen/hundred50dp"
             android:contentDescription="Upload Image"
             android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/image_upload_icon"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -130,5 +132,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <requestFocus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="581dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

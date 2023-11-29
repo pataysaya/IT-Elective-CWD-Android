@@ -1,32 +1,33 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.databinding.ActivityAddItemBinding
 import com.google.firebase.Firebase
-import com.google.firebase.FirebaseApp
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.IgnoreExtraProperties
 import com.google.firebase.firestore.firestore
-import com.google.firebase.storage.storage
-
 
 class AddItemActivity : AppCompatActivity(){
-    private lateinit var binding: ActivityAddItemBinding
 
     private lateinit var auth: FirebaseAuth
 
     private val db = Firebase.firestore
+
+//    private var storage: FirebaseStorage = FirebaseStorage.getInstance()
+
+//    private var container: View = findViewById<View>(R.id.imageview4)
+//    private var upButton: Button = findViewById<Button>(R.id.uploadButton)
+//    private val urlname: EditText= findViewById<EditText>(R.id.imageURLET)
+
+
 
     @IgnoreExtraProperties
     data class Item(
@@ -39,36 +40,26 @@ class AddItemActivity : AppCompatActivity(){
     @SuppressLint("MissingInflatedId", "ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        FirebaseApp.initializeApp(this)
-        //val storageRef = FirebaseStorage.getInstance().reference
-
-        binding = ActivityAddItemBinding.inflate((layoutInflater))
+//        container.setOnClickListener {
+//            val capture = Bitmap.createBitmap(container.width, container.height, Bitmap.Config.ARGB_8888)
+//            val captureCanvas = Canvas(capture)
+//            container.draw(captureCanvas)
+//            val outputStream = ByteArrayOutputStream()
+//            capture.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+//            val data: ByteArray = outputStream.toByteArray()
+//
+//            val path = "upimages/" + UUID.randomUUID() + ".png"
+//            val firenameRef: StorageReference = storage.getReference(path)
+//            val metadata: StorageMetadata = StorageMetadata.Builder()
+//                .setCustomMetadata("caption", urlname.text.toString())
+//                .build()
+//
+//            val uploadTask: UploadTask = firenameRef.putBytes(data, metadata)
+//            uploadTask
+//        }
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_item)
-
-        val imageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-            if (it.resultCode == Activity.RESULT_OK){
-                if (it.data != null){
-                    val ref = Firebase.storage.reference.child("images")
-
-                    ref.putFile(it.data!!.data!!).addOnSuccessListener {
-                        ref.downloadUrl.addOnSuccessListener {
-                            binding.imageview4?.setImageURI(it)
-                            Toast.makeText(this@AddItemActivity, "Photo Uploaded", Toast.LENGTH_LONG).show()
-                        }
-                    }
-                }
-            }
-        }
-
-        binding.uploadButton?.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_PICK
-            intent.type = "images/*"
-            imageLauncher.launch(intent)
-        }
-
 
 
         auth = Firebase.auth
