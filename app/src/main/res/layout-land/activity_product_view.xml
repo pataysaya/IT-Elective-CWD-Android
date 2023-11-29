@@ -18,43 +18,44 @@
 
         <ImageView
             android:id="@+id/itemimage"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/twohundreddp"
+            android:layout_width="@dimen/twohundreddp"
+            android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter" />
 
-        <LinearLayout
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        tools:ignore="WebViewLayout">
+
+        <TextView
+            android:id="@+id/itemname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:orientation="vertical"
-            tools:ignore="WebViewLayout">
+            android:gravity="center|center_horizontal"
+            android:text="@string/item_name"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="monospace"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/itemname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center|center_horizontal"
-                android:text="@string/item_name"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:fontFamily="monospace"
-                android:textStyle="bold" />
-
-            <WebView
-                android:id="@+id/itemdescription"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/threehundreddp"
-                android:textAlignment="center"
-                android:theme="@style/TextAppearance.AppCompat.Body2" />
-
-        </LinearLayout>
+        <WebView
+            android:id="@+id/itemdescription"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundreddp"
+            android:textAlignment="center"
+            android:theme="@style/TextAppearance.AppCompat.Body2" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
+            android:padding="@dimen/pad_small"
             android:orientation="horizontal">
 
             <TextView
@@ -85,20 +86,24 @@
 
         </LinearLayout>
 
-
-            <Button
-                android:id="@+id/backbutton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:padding="@dimen/pad_small"
-                android:backgroundTint="@color/pale_white"
-                android:text="@string/Back"
-                android:textColor="@color/black"
-                app:cornerRadius="8sp" />
-
+        <Button
+            android:id="@+id/backbutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/pad_small"
+            android:backgroundTint="@color/pale_white"
+            android:text="@string/Back"
+            android:textColor="@color/black"
+            app:cornerRadius="8sp" />
 
     </LinearLayout>
+
+
+
+
+
+
 
     <!-- Add TextViews for other details -->
 

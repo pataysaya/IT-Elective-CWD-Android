@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearlayoutsub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -18,17 +19,33 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="@dimen/hundred80dp"
-            android:layout_height="@dimen/hundred80dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/app_name"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/computer_world_logo" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/hundred80dp"
+                android:layout_height="@dimen/hundred80dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/computer_world_logo" />
+
+            <View
+                android:id="@+id/imageview4"
+                android:layout_width="@dimen/twohundreddp"
+                android:layout_height="@dimen/hundreddp"
+                android:contentDescription="Upload Image"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@drawable/image_upload_icon"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -98,6 +115,18 @@
                 android:textColorHint="@color/dark_gray"
                 tools:ignore="TextFields,VisualLintTextFieldSize" />
 
+
+
+            <Button
+                android:id="@+id/uploadButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/LoginColor"
+                app:cornerRadius="8sp"
+                android:text="@string/upload_file"
+                android:textColor="@color/black"
+                tools:ignore="VisualLintButtonSize" />
+
             <Button
                 android:id="@+id/addButton"
                 android:layout_width="match_parent"
@@ -123,6 +152,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearlayoutsub" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
